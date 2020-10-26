@@ -83,6 +83,13 @@ public class Departement implements Serializable {
 	public void setEntreprise(Entreprise entreprise) {
 		this.entreprise = entreprise;
 	}
+
+	public Departement(int id, String name, Entreprise entreprise) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.entreprise = entreprise;
+	}
 	
 	
 

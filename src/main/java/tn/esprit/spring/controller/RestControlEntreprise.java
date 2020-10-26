@@ -29,15 +29,15 @@ public class RestControlEntreprise {
 	@Autowired
 	ITimesheetService itimesheetservice;
 	
-	// Ajouter Entreprise : http://localhost:8081/SpringMVC/servlet/ajouterEntreprise
+	//Ajouter Entreprise : http://localhost:8081/SpringMVC/servlet/ajouterEntreprise
 	//{"id":1,"name":"SSII Consulting","raisonSocial":"Cite El Ghazela"}
 
-	@PostMapping("/ajouterEntreprise")
+	/*@PostMapping("/ajouterEntreprise")
 	@ResponseBody
 	public int ajouterEntreprise(@RequestBody Entreprise ssiiConsulting) {
 		ientrepriseservice.ajouterEntreprise(ssiiConsulting);
 		return ssiiConsulting.getId();
-	}
+	}*/
 	
 	// http://localhost:8081/SpringMVC/servlet/affecterDepartementAEntreprise/1/1
     @PutMapping(value = "/affecterDepartementAEntreprise/{iddept}/{identreprise}") 
@@ -46,20 +46,20 @@ public class RestControlEntreprise {
 	}
     
     // http://localhost:8081/SpringMVC/servlet/deleteEntrepriseById/1
-    @DeleteMapping("/deleteEntrepriseById/{identreprise}") 
+   /* @DeleteMapping("/deleteEntrepriseById/{identreprise}") 
 	@ResponseBody 
 	public void deleteEntrepriseById(@PathVariable("identreprise")int entrepriseId)
 	{
 		ientrepriseservice.deleteEntrepriseById(entrepriseId);
 	}
-    
+    */
     // http://localhost:8081/SpringMVC/servlet/getEntrepriseById/1
-    @GetMapping(value = "getEntrepriseById/{identreprise}")
+  /*  @GetMapping(value = "getEntrepriseById/{identreprise}")
     @ResponseBody
 	public Entreprise getEntrepriseById(@PathVariable("identreprise") int entrepriseId) {
 
 		return ientrepriseservice.getEntrepriseById(entrepriseId);
-	}
+	}*/
     
     // http://localhost:8081/SpringMVC/servlet/ajouterDepartement
  	//{"id":1,"name":"Telecom"}
