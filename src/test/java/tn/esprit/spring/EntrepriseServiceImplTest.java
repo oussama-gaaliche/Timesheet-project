@@ -41,6 +41,7 @@ public class EntrepriseServiceImplTest {
 	 
 		//ES.UpdateEntreprise(new Entreprise(12,"TestUpdate","Update"));}
 	
+
 	 	@Test
 	 public void testgetallEntreprise() throws ParseException {
 			List<Entreprise> listentreprises=ES.getallEntreprises();
