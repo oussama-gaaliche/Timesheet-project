@@ -25,7 +25,7 @@ public class EntrepriseServiceImplTest {
 	
 	
 	@Test
-	 public void AjoutEntreprise() throws ParseException {
+	 public void testAjoutEntreprise() throws ParseException {
 		Entreprise entreprise=new Entreprise("test1","raisonSocial");
 		Entreprise entrepriseAdded = ES.ajouterEntreprise(entreprise);
 		assertEquals(entreprise.getName(),entrepriseAdded.getName());
@@ -34,53 +34,60 @@ public class EntrepriseServiceImplTest {
 	
 		//ES.ajouterEntreprise(new Entreprise("test1","raisonSocial"));}
 @Test
-	 public void UpdateEntreprise() throws ParseException {
-	 Entreprise entreprise=new Entreprise(2,"TestUpdate","Update");
+
+	 public void testUpdateEntreprise() throws ParseException {
+	 Entreprise entreprise=new Entreprise(14,"TestUpdate","Update");
 	 Entreprise entrepriseUpdated=ES.UpdateEntreprise(entreprise);
 	 assertEquals(entreprise.getName(),entrepriseUpdated.getName());}
 	 
 		//ES.UpdateEntreprise(new Entreprise(12,"TestUpdate","Update"));}
 	
 	 	@Test
-	 public void getallEntreprise() throws ParseException {
+	 public void testgetallEntreprise() throws ParseException {
 			List<Entreprise> listentreprises=ES.getallEntreprises();
 			assertEquals(5,listentreprises.size());
 		
 		}
 
+	 	
 	
 	@Test
+
 	 public void getEntrepriseById() throws ParseException {
 	    Entreprise entrepriseretrieved=ES.getEntrepriseById(2);
+
 	    assertThat(21, is(entrepriseretrieved.getId()));
 		}
 		//Entreprise entrepriseretrieved= ES.getEntrepriseById(14);
 		
 	@Test
-	 public void deleteAll() throws ParseException {
+	 public void testdeleteAll() throws ParseException {
 		ES.deleteAll();
 		List<Entreprise> listentreprises=ES.getallEntreprises();
 			assertEquals(0,listentreprises.size());}
 	
 	 @Test
+
 	  public void deleteEntrepriseById() throws ParseException {
 		ES.deleteEntrepriseById(4);
+
 			
 				
 					
 				}
 
+
 //	@Test
-//	 public void AffecterDepAentreprise() throws ParseException {
+//	 public void testAffecterDepAentreprise() throws ParseException {
 //		ES.affecterDepartementAEntreprise(6,22);
 //		}
 //  
 //
 //	@Test
-//	 public void getAllDepartementsNamesByEntreprise() throws ParseException {
+//	 public void testgetAllDepartementsNamesByEntreprise() throws ParseException {
 //		List<String> listeName=ES.getAllDepartementsNamesByEntreprise(21);
 //		assertEquals(5,listeName.size());}
-	
+
 	
 	
 		
