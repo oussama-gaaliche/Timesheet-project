@@ -31,9 +31,9 @@ public class TimesheetServiceImpl implements ITimesheetService {
 	@Autowired
 	EmployeRepository employeRepository;
 	
-	public int ajouterMission(Mission mission) {
+	public Mission ajouterMission(Mission mission) {
 		missionRepository.save(mission);
-		return mission.getId();
+		return missionRepository.save(mission);
 	}
     
 	public void affecterMissionADepartement(int missionId, int depId) {
