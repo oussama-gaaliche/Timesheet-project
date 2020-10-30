@@ -77,16 +77,16 @@ public class EntrepriseServiceImplTest {
 				}
 
 
-//	@Test
-//	 public void testAffecterDepAentreprise() throws ParseException {
-//		ES.affecterDepartementAEntreprise(6,22);
-//		}
-//  
-//
-//	@Test
-//	 public void testgetAllDepartementsNamesByEntreprise() throws ParseException {
-//		List<String> listeName=ES.getAllDepartementsNamesByEntreprise(21);
-//		assertEquals(5,listeName.size());}
+	@Test
+	 public void testAffecterDepAentreprise() throws ParseException {
+	ES.affecterDepartementAEntreprise(6,22);
+	}
+ 
+
+	@Test
+	 public void testgetAllDepartementsNamesByEntreprise() throws ParseException {
+		List<String> listeName=ES.getAllDepartementsNamesByEntreprise(21);
+		assertEquals(5,listeName.size());}
 
 	
 	
