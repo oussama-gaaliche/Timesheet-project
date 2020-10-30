@@ -27,7 +27,7 @@ public class EmployeeServiceImplTest {
 	@Test
 	public void testAddOrUpdateEmploye() throws ParseException {
 	
-		Employe em = new Employe("abderahmen", "smida", "oussama.gaaliche@esprit.tn","oussama",true,Role.INGENIEUR);
+		Employe em = new Employe("majdi", "lahsini", "oussama.gaaliche@esprit.tn","oussama",true,Role.INGENIEUR);
 		int employeAddedId = es.addOrUpdateEmploye(em); 
 		
 		
@@ -43,13 +43,13 @@ public class EmployeeServiceImplTest {
 	}
 	@Test
 	public void testRetrieveEmployeById() {
-		String EmployeRetrieved = es.getEmployePrenomById(2); 
+		String EmployeRetrieved = es.getEmployePrenomById(3); 
 		
 	}
 	@Test
 	public void testaffectercontrataemploye() {
 		
-		es.affecterContratAEmploye(3, 3);
+		es.affecterContratAEmploye(4, 4);
 		
 	}
 	
