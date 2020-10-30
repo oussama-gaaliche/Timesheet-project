@@ -9,6 +9,8 @@ public interface IDepartementService {
 	
 	
 	public List<Departement> getAllDepartements();
+	public void deleteAll();
+
 
 
 	
