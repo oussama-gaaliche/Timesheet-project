@@ -1,13 +1,13 @@
 package tn.esprit.spring;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,8 +27,9 @@ public class EmployeeServiceImplTest {
 	@Test
 	public void testAddOrUpdateEmploye() throws ParseException {
 	
-		Employe em = new Employe("Oussama", "Gaâliche", "oussama.gaaliche@esprit.tn","oussama",true,Role.INGENIEUR);
+		Employe em = new Employe("ahmed", "younes", "oussama.gaaliche@esprit.tn","oussama",true,Role.INGENIEUR);
 		int employeAddedId = es.addOrUpdateEmploye(em); 
+		
 		
 	}
 	@Test
@@ -36,11 +37,17 @@ public class EmployeeServiceImplTest {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date d = dateFormat.parse("2015-03-23");
 		Contrat c = new Contrat(d, "CDI", 1800);
+		
 		int ContratAdded = es.ajouterContrat(c); 
 		
 	}
 	@Test
 	public void testRetrieveEmployeById() {
+		es.affecterContratAEmploye(1, 1);
+		
+	}
+	@Test
+	public void testaffectercontrataemploye() {
 		String EmployeRetrieved = es.getEmployePrenomById(1); 
 		
 	}
