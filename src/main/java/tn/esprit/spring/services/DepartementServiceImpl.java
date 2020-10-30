@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import tn.esprit.spring.entities.Departement;
+import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.repository.DepartementRepository;
 
 @Service
@@ -45,6 +46,24 @@ public class DepartementServiceImpl implements IDepartementService {
 	public void deleteAll() {
 	
 			deptRepoistory.deleteAll();
+		
+	}
+	
+	public Departement ajouterDepartement(Departement dpt) {
+		
+		try {
+		logger.info("Dans la  methode ajouterDepartement()");
+		logger.debug("Je vais lancer l'ajout d'un nouveau Departement .");
+		deptRepoistory.save(dpt);
+		logger.debug("Je viens de finir l'ajout .");
+		logger.info("Out ajouterDepartement() without errors avec.");
+		}
+		catch (Exception e) 
+		{ 
+		logger.error("Erreur dans ajouterDepartement() : " + e); }
+		logger.info("fin methode ajouterDepartement() .");
+		return dpt ;
+	
 		
 	}
 
