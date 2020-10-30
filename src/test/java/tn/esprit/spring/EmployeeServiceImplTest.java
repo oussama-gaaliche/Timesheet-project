@@ -27,7 +27,7 @@ public class EmployeeServiceImplTest {
 	@Test
 	public void testAddOrUpdateEmploye() throws ParseException {
 	
-		Employe em = new Employe("ahmed", "younes", "oussama.gaaliche@esprit.tn","oussama",true,Role.INGENIEUR);
+		Employe em = new Employe("abderahmen", "smida", "oussama.gaaliche@esprit.tn","oussama",true,Role.INGENIEUR);
 		int employeAddedId = es.addOrUpdateEmploye(em); 
 		
 		
@@ -35,20 +35,21 @@ public class EmployeeServiceImplTest {
 	@Test
 	public void testAddContrat() throws ParseException {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		Date d = dateFormat.parse("2015-03-23");
-		Contrat c = new Contrat(d, "CDI", 1800);
+		Date d = dateFormat.parse("2018-05-10");
+		Contrat c = new Contrat(d, "Cvp", 1800);
 		
 		int ContratAdded = es.ajouterContrat(c); 
 		
 	}
 	@Test
 	public void testRetrieveEmployeById() {
-		es.affecterContratAEmploye(1, 1);
+		String EmployeRetrieved = es.getEmployePrenomById(2); 
 		
 	}
 	@Test
 	public void testaffectercontrataemploye() {
-		String EmployeRetrieved = es.getEmployePrenomById(1); 
+		
+		es.affecterContratAEmploye(3, 3);
 		
 	}
 	

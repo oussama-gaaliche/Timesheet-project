@@ -18,6 +18,8 @@ import tn.esprit.spring.repository.ContratRepository;
 import tn.esprit.spring.repository.DepartementRepository;
 import tn.esprit.spring.repository.EmployeRepository;
 import tn.esprit.spring.repository.TimesheetRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Service
 public class EmployeServiceImpl implements IEmployeService {
@@ -30,15 +32,18 @@ public class EmployeServiceImpl implements IEmployeService {
 	ContratRepository contratRepoistory;
 	@Autowired
 	TimesheetRepository timesheetRepository;
-
+	private static final Logger l = LogManager.getLogger(EmployeServiceImpl.class);
 	@Override
 	public Employe authenticate(String login, String password) {
+		
 		return employeRepository.getEmployeByEmailAndPassword(login, password);
 	}
 
 	@Override
 	public int addOrUpdateEmploye(Employe employe) {
+		l.info("In  addOrUpdateEmploye : "+employe); 
 		employeRepository.save(employe);
+		l.info("Out addOrUpdateEmploye : "); 
 		return employe.getId();
 	}
 
@@ -86,7 +91,9 @@ public class EmployeServiceImpl implements IEmployeService {
 	// Tablesapce (espace disque) 
 
 	public int ajouterContrat(Contrat contrat) {
+		l.info("In  ajouterContrat : "+contrat); 
 		contratRepoistory.save(contrat);
+		l.info("Out  ajouterContrat : "); 
 		return contrat.getReference();
 	}
 
@@ -100,7 +107,9 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public String getEmployePrenomById(int employeId) {
+		l.info("In  getEmployePrenomById : "+employeId); 
 		Employe employeManagedEntity = employeRepository.findById(employeId).get();
+		l.info("Out  getEmployePrenomById : "); 
 		return employeManagedEntity.getPrenom();
 	}
 	 
@@ -125,7 +134,9 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public int getNombreEmployeJPQL() {
+		l.info("In getNombreEmployeJPQ : "); 
 		return employeRepository.countemp();
+		
 	}
 
 	public List<String> getAllEmployeNamesJPQL() {
@@ -134,6 +145,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public List<Employe> getAllEmployeByEntreprise(Entreprise entreprise) {
+		l.info("In getAllEmployeByEntreprise : "+entreprise); 
 		return employeRepository.getAllEmployeByEntreprisec(entreprise);
 	}
 
@@ -146,19 +158,23 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public float getSalaireByEmployeIdJPQL(int employeId) {
+		l.info("In getSalaireByEmployeIdJPQL : "+employeId); 
 		return employeRepository.getSalaireByEmployeIdJPQL(employeId);
 	}
 
 	public Double getSalaireMoyenByDepartementId(int departementId) {
+		l.info("In  getSalaireMoyenByDepartementId : "+departementId); 
 		return employeRepository.getSalaireMoyenByDepartementId(departementId);
 	}
 
 	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,
 			Date dateFin) {
+		l.info("In  getTimesheetsByMissionAndDate : "+employe+" "+mission+" "+dateDebut+" "+dateFin);
 		return timesheetRepository.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin);
 	}
 
 	public List<Employe> getAllEmployes() {
+		l.info("In  getAllEmployes: "); 
 		return (List<Employe>) employeRepository.findAll();
 	}
 
