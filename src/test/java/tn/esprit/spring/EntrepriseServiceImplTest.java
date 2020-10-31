@@ -52,13 +52,13 @@ public class EntrepriseServiceImplTest {
 
 	 	
 	
-	@Test
-
-	 public void getEntrepriseById() throws ParseException {
-	    Entreprise entrepriseretrieved=ES.getEntrepriseById(32);
-	    //assertThat(21, is(entrepriseretrieved.getId()));
-		}
-		//Entreprise entrepriseretrieved= ES.getEntrepriseById(14);
+//	@Test
+//
+//	 public void getEntrepriseById() throws ParseException {
+//	    Entreprise entrepriseretrieved=ES.getEntrepriseById(36);
+//	    //assertThat(21, is(entrepriseretrieved.getId()));
+//		}
+//		//Entreprise entrepriseretrieved= ES.getEntrepriseById(14);
 		
 	@Test
 	 public void testdeleteAll() throws ParseException {
