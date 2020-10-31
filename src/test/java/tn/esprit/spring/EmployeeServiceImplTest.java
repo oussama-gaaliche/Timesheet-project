@@ -1,13 +1,15 @@
 package tn.esprit.spring;
 
-import static org.junit.Assert.*;
+
+
+import static org.junit.Assert.assertEquals;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,7 +29,7 @@ public class EmployeeServiceImplTest {
 	@Test
 	public void testAddOrUpdateEmploye() throws ParseException {
 	
-		Employe em = new Employe("majdi", "lahsini", "oussama.gaaliche@esprit.tn","oussama",true,Role.INGENIEUR);
+		Employe em = new Employe("wajih", "jebali", "oussama.gaaliche@esprit.tn","oussama",true,Role.INGENIEUR);
 		int employeAddedId = es.addOrUpdateEmploye(em); 
 		
 		
@@ -35,8 +37,8 @@ public class EmployeeServiceImplTest {
 	@Test
 	public void testAddContrat() throws ParseException {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		Date d = dateFormat.parse("2018-05-10");
-		Contrat c = new Contrat(d, "Cvp", 1800);
+		Date d = dateFormat.parse("2020-05-10");
+		Contrat c = new Contrat(d, "CDI", 2500);
 		
 		int ContratAdded = es.ajouterContrat(c); 
 		
@@ -49,7 +51,7 @@ public class EmployeeServiceImplTest {
 	@Test
 	public void testaffectercontrataemploye() {
 		
-		es.affecterContratAEmploye(4, 4);
+		es.affecterContratAEmploye(8, 8);
 		
 	}
 	
@@ -57,7 +59,7 @@ public class EmployeeServiceImplTest {
 	public void testRetrieveAllEmployes() {
 		List<Employe> listEmployes = es.getAllEmployes(); 
 		// if there are 5 users in DB : 
-		assertEquals(5, listEmployes.size());
+		assertEquals(11, listEmployes.size());
 	}
 
 }
