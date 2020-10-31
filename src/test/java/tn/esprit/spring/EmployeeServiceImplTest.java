@@ -29,7 +29,7 @@ public class EmployeeServiceImplTest {
 	@Test
 	public void testAddOrUpdateEmploye() throws ParseException {
 	
-		Employe em = new Employe("wajih", "jebali", "oussama.gaaliche@esprit.tn","oussama",true,Role.INGENIEUR);
+		Employe em = new Employe("takwa", "chenab", "takwa.chenab@esprit.tn","oussama",true,Role.INGENIEUR);
 		int employeAddedId = es.addOrUpdateEmploye(em); 
 		
 		
@@ -51,7 +51,7 @@ public class EmployeeServiceImplTest {
 	@Test
 	public void testaffectercontrataemploye() {
 		
-		es.affecterContratAEmploye(8, 8);
+		es.affecterContratAEmploye(1, 1);
 		
 	}
 	
