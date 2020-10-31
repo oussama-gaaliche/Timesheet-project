@@ -90,6 +90,12 @@ public class Departement implements Serializable {
 		this.name = name;
 		this.entreprise = entreprise;
 	}
+
+	public Departement(String name, Entreprise entreprise) {
+		super();
+		this.name = name;
+		this.entreprise = entreprise;
+	}
 	
 	
 

@@ -12,7 +12,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import tn.esprit.spring.entities.Departement;
-
+import tn.esprit.spring.entities.Entreprise;
+import tn.esprit.spring.services.DepartementServiceImpl;
 import tn.esprit.spring.services.IDepartementService;
 
 @RunWith(SpringRunner.class)
@@ -20,7 +21,7 @@ import tn.esprit.spring.services.IDepartementService;
 public class DepartementServiceImplTest {
 	
 	@Autowired
-	IDepartementService DS;
+	DepartementServiceImpl DS;
 	
 	@Test
 	 public void testgetallDepartement() throws ParseException {
@@ -29,4 +30,21 @@ public class DepartementServiceImplTest {
 		
 		}
 
+	
+	@Test
+	 public void testdeleteAll() throws ParseException {
+		DS.deleteAll();
+		List<Departement> listdept=DS.getAllDepartements();
+			assertEquals(0,listdept.size());
+			}
+	
+	@Test
+	 public void testAjoutDepartement() throws ParseException {
+		Departement dpt=new Departement("test");
+		Departement departementAdded = DS.ajouterDepartement(dpt);
+		assertEquals(dpt.getName(),departementAdded.getName());
+		}
+	
 }
+
+
