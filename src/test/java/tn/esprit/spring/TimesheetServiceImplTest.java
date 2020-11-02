@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Mission;
 import tn.esprit.spring.entities.Timesheet;
 import tn.esprit.spring.entities.TimesheetPK;
@@ -51,6 +52,14 @@ public class TimesheetServiceImplTest {
 		List<Mission> missions = ts.findAllMissionByEmployeJPQL(1);
 		//assertEquals(0, missions.size());
 	}
+	
+	@Test
+	public void testgetAllEmployeByMission(){
+		List<Employe> employees = ts.getAllEmployeByMission(1);
+		//assertEquals(0, emloyees.size());
+	}
+	
+	
 		
 	
 		
