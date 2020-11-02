@@ -3,6 +3,7 @@ package tn.esprit.spring;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Date;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -42,10 +43,14 @@ public class TimesheetServiceImplTest {
 		timesheet.setValide(false); //par defaut non valide
 		
 		assertEquals(timesheet.getMission(), ts.ajouterTimesheet(1, 1, new Date(), new Date()).getMission());
-	}
+	}	
+	
+	@Test 
+	public void testfindAllMissionByEmployeJPQL(){
 		
-	
-	
+		List<Mission> missions = ts.findAllMissionByEmployeJPQL(1);
+		//assertEquals(0, missions.size());
+	}
 		
 	
 		
