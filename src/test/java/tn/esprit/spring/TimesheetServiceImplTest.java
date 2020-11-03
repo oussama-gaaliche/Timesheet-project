@@ -41,7 +41,7 @@ public class TimesheetServiceImplTest {
 	@Test
 	public void testajouterTimesheet(){
 		
-		logger.info("Creation d'une Timesheet");
+		
 		TimesheetPK timesheetPK = new TimesheetPK();
 		timesheetPK.setDateDebut(new Date());
 		timesheetPK.setDateFin(new Date());
