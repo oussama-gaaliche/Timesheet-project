@@ -64,12 +64,12 @@ public class EntrepriseServiceImplTest {
 		}
 		//Entreprise entrepriseretrieved= ES.getEntrepriseById(14);
 		
-	@Test
-	 public void testdeleteAll() throws ParseException {
-		ES.deleteAll();
-		List<Entreprise> listentreprises=ES.getallEntreprises();
-			assertEquals(0,listentreprises.size());}
-	
+//	@Test
+//	 public void testdeleteAll() throws ParseException {
+//		ES.deleteAll();
+//		List<Entreprise> listentreprises=ES.getallEntreprises();
+//			assertEquals(0,listentreprises.size());}
+//	
 	 @Test
 
 	  public void deleteEntrepriseById() throws ParseException {

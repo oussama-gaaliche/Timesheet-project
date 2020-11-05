@@ -61,5 +61,15 @@ public class EmployeeServiceImplTest {
 		// if there are 5 users in DB : 
 	//	assertEquals(11, listEmployes.size());
 	}
+	
+	@Test
+
+	  public void deleteEntrepriseById() throws ParseException {
+		es.deleteEmployeById(35);
+
+			
+				
+					
+				}
 
 }
