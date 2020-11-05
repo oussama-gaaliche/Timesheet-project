@@ -1,6 +1,7 @@
 package tn.esprit.spring;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Date;
 import java.util.List;
@@ -59,12 +60,13 @@ public class TimesheetServiceImplTest {
 	public void testfindAllMissionByEmployeJPQL(){
 		
 		List<Mission> missions = ts.findAllMissionByEmployeJPQL(1);
-		//assertEquals(0, missions.size());
+		assertTrue(missions.size()<10);
 	}
 	
 	@Test
 	public void testgetAllEmployeByMission(){
 		List<Employe> employees = ts.getAllEmployeByMission(1);
+		assertTrue(employees.size()<10);
 		//assertEquals(0, emloyees.size());
 		//test
 	}
