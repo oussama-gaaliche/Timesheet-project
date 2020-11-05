@@ -33,9 +33,6 @@ public class RestControlEmploye {
 	ITimesheetService itimesheetservice;
 
 	
-	// http://localhost:8081/SpringMVC/servlet/ajouterEmployer
-	//{"id":1,"nom":"kallel", "prenom":"khaled", "email":"Khaled.kallel@ssiiconsulting.tn", "isActif":true, "role":"INGENIEUR"}
-	
 	@PostMapping("/ajouterEmployer")
 	@ResponseBody
 	public Employe ajouterEmploye(@RequestBody Employe employe)
@@ -44,7 +41,7 @@ public class RestControlEmploye {
 		return employe;
 	}
 	
-	// Modifier email : http://localhost:8081/SpringMVC/servlet/modifyEmail/1/newemail
+	
 	@PutMapping(value = "/modifyEmail/{id}/{newemail}") 
 	@ResponseBody
 	public void mettreAjourEmailByEmployeId(@PathVariable("newemail") String email, @PathVariable("id") int employeId) {
@@ -161,7 +158,7 @@ public class RestControlEmploye {
 	}
 
 	
-	//TODO
+	
 	public List<Timesheet> getTimesheetsByMissionAndDate(Employe employe, Mission mission, Date dateDebut,
 			Date dateFin) {
 		return iemployeservice.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin);
