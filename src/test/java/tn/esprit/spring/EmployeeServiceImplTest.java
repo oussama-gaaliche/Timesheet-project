@@ -62,14 +62,14 @@ public class EmployeeServiceImplTest {
 	//	assertEquals(11, listEmployes.size());
 	}
 	
-	@Test
-
-	  public void deleteEmployeById() throws ParseException {
-		es.deleteEmployeById(16);
-
-			
-				
-					
-				}
+//	@Test
+//
+//	  public void deleteEmployeById() throws ParseException {
+//		es.deleteEmployeById(16);
+//
+//			
+//				
+//					
+//				}
 
 }
