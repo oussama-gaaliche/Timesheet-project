@@ -57,7 +57,7 @@ public class EntrepriseServiceImplTest {
 	 public void getEntrepriseById() throws ParseException {
 		try{
 	    Entreprise entrepriseretrieved=ES.getEntrepriseById(36);
-	    assertThat(21, is(entrepriseretrieved.getId()));
+	    assertThat(36, is(entrepriseretrieved.getId()));
 		}catch(Exception e){
 			System.out.println("entreprise with 36 not founded");
 		}

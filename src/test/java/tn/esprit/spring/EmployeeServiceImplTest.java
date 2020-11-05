@@ -64,8 +64,8 @@ public class EmployeeServiceImplTest {
 	
 	@Test
 
-	  public void deleteEntrepriseById() throws ParseException {
-		es.deleteEmployeById(35);
+	  public void deleteEmployeById() throws ParseException {
+		es.deleteEmployeById(18);
 
 			
 				
