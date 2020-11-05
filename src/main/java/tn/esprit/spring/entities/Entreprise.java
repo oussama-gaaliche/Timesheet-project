@@ -93,6 +93,11 @@ public class Entreprise implements Serializable{
 	public String toString() {
 		return "Entreprise [id=" + id + ", name=" + name + ", raisonSocial=" + raisonSocial + "]";
 	}
+
+	public Entreprise(int id) {
+		super();
+		this.id = id;
+	}
 	
 
 
