@@ -4,20 +4,11 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/oussama-gaaliche/Timesheet-project.git
+
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/oussama-gaaliche/Timesheet-project.git
 import org.springframework.stereotype.Service;
-<<<<<<< HEAD
-
-=======
->>>>>>> branch 'master' of https://github.com/oussama-gaaliche/Timesheet-project.git
 
 import tn.esprit.spring.entities.Contrat;
 import tn.esprit.spring.repository.ContratRepository;
